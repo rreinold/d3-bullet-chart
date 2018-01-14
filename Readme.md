@@ -10,6 +10,5 @@ Linear visualizations can be enriched with multiple zones and points along a giv
 `current` - Current placement  
 `best` - Best achieved  
 `goal` - Goal position  
-`max` - Max value for progress (optional)
+`finish` - Max value for progress (optional)
 
-  
