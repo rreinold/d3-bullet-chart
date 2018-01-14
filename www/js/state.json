@@ -1,0 +1,10 @@
+[
+		{
+			"name":		"bullet-chart-1",
+			"start":	135,
+			"finish":	255,
+			"current":	185,
+			"best":		200,
+			"goal":		225
+		}
+]
