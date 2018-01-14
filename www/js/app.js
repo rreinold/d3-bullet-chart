@@ -1,9 +1,14 @@
 const MAX_X = 200
 const MAX_Y = 200
-const BAR_HEIGHT = 10
+
 const MARKER_WIDTH = 2
 const MARKER_HEIGHT = 15
+
+const BAR_HEIGHT = 10
 const BAR_Y = (MARKER_HEIGHT - BAR_HEIGHT) / 2
+
+const MARGIN = 20
+
 
 function startup(status){
 	var graph1 = status[0]
@@ -65,13 +70,16 @@ function startup(status){
 
 	var markers = [0,currentMaxBound,bestMaxBound,goalMaxBound, x(graph1.finish)]
 	markers.forEach(function(e){
-		var currentMarker = svgContainer.append("rect")
-    	.attr("x",e - HALF_MARKER_WIDTH)
-    	.attr("y",0)
-    	.attr("width",MARKER_WIDTH)
-    	.attr("height",MARKER_HEIGHT)
+		var markerGroup = svgContainer.append("g")
+		markerGroup.append("rect")
+	    	.attr("x",e - HALF_MARKER_WIDTH)
+	    	.attr("y",0)
+	    	.attr("width",MARKER_WIDTH)
+	    	.attr("height",MARKER_HEIGHT)
+	    markerGroup.append("text")
+	    	.attr("y", 50)
+	    	.text("Hello there")
 	})
-
 }
 
 function loadJSON(url, callback) {	 
